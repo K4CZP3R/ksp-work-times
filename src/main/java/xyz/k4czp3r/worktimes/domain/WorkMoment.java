@@ -23,4 +23,7 @@ public class WorkMoment {
     private int breakTime;
     private String workType;
     private String workDescription;
+
+    @Type(type = "uuid-char")
+    private UUID userId;
 }
