@@ -10,6 +10,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import xyz.k4czp3r.worktimes.exception.IllegalInputException;
 import xyz.k4czp3r.worktimes.model.ApiErrorResponse;
 
+import java.text.ParseException;
+
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
@@ -23,5 +25,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         ApiErrorResponse apiErrorResponse = new ApiErrorResponse(HttpStatus.NOT_ACCEPTABLE, ex);
         return buildResponseEntity(apiErrorResponse);
     }
+
 
 }
